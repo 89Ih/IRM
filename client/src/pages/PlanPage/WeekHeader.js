@@ -3,6 +3,7 @@ import { AuthContext } from "../../context/auth.context";
 import "./PlanPage.css";
 const WeekHeader = () => {
   const { currentDate, content, mode, styles } = useContext(AuthContext);
+  const {currentWeek} = content
   const { borderBottom, borderTop } = styles;
   const { woy, week } = currentDate;
   const [weeks, setWeeks] = useState([]);
@@ -55,7 +56,8 @@ const WeekHeader = () => {
         ]);
         break;
     }
-  }, [woy, week]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [woy, week,content.currentWeek]);
 
   return (
     <ul style={{ borderBottom, borderTop }}>
@@ -70,7 +72,7 @@ const WeekHeader = () => {
               <u
                 style={{
                   color:
-                    weekLabel === content.currentWeek &&
+                    weekLabel === currentWeek &&
                     `${mode !== "dark" ? "#006f67" : "#90EE90"}`,
                 }}
               >
