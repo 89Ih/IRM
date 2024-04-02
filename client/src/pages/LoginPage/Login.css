@@ -1,0 +1,36 @@
+._form_login{
+    width: 600px;
+    gap: 15px;
+}
+._ipt{
+    padding: 0 10px 0 10px;
+    border:1px solid #cccccc33;
+    outline: unset;
+    width: 90%;
+    height: 38px;
+    border-radius: 8px;
+    background-color: unset;
+    
+}
+._btn{
+    border:1px solid #cccccc33;
+    width: 90%;
+    height: 38px;
+    border-radius: 8px;
+    background-color: unset;
+    text-align: center;
+}
+._btn:hover{
+    background-color: #474545a4 ;
+}
+@media only screen and (max-width: 600px) {
+    ._form_login {
+    width: 100%;
+    }
+    ._ipt,
+    ._btn{
+        width: 95%;
+    }
+  }
+
+ 

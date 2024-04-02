@@ -1,0 +1,30 @@
+._boxes {
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 15px 10px 0 10px;
+  gap: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: unset;
+}
+._boxes > a {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 5px;
+  width: 150px;
+  height: 125px;
+  text-align: center;
+  color: unset;
+}
+
+
+
+._darkhover > a:hover {
+  background-color: #474545a4;
+}
+._lighthover > a:hover {
+  background-color: #6ecfc580;
+}

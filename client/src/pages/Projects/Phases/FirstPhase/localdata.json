@@ -1,0 +1,119 @@
+[
+    {
+        "versioncotrol": [
+            {
+                "id": 1,
+                "vcs": "Git",
+                "availability": "Free (open-source)"
+            },
+            {
+                "id": 2,
+                "vcs": "Subversion (SVN)",
+                "availability": "Free (open-source)"
+            },
+            {
+                "id": 3,
+                "vcs": "Mercurial (Hg)",
+                "availability": "Free (open-source)"
+            },
+            {
+                "id": 4,
+                "vcs": "Perforce (Helix Core)",
+                "availability": "Not free (commercial)"
+            },
+            {
+                "id": 5,
+                "vcs": "Microsoft Team Foundation Version Control (TFVC)",
+                "availability": "Both free and paid tiers available"
+            },
+            {
+                "id": 6,
+                "vcs": "IBM Rational ClearCase",
+                "availability": "Not free (commercial)"
+            },
+            {
+                "id": 7,
+                "vcs": "Concurrent Versions System (CVS)",
+                "availability": "Free (open-source)"
+            },
+            {
+                "id": 8,
+                "vcs": "Bazaar (bzr)",
+                "availability": "Free (open-source)"
+            },
+            {
+                "id": 9,
+                "vcs": "Darcs",
+                "availability": "Free (open-source)"
+            },
+            {
+                "id": 10,
+                "vcs": "Fossil",
+                "availability": "Free (open-source)"
+            },
+            {
+                "id": 11,
+                "vcs": "Plastic SCM",
+                "availability": "Both free and paid editions available"
+            },
+            {
+                "id": 12,
+                "vcs": "GNU arch",
+                "availability": "Free (open-source)"
+            }
+        ],
+        "developmentMethodology":[
+            {
+                "id": "dm1",
+                "dm": "Waterfall Model",
+                "avail": "Free (Open Source)"
+            },
+            {
+                "id": "dm2",
+                "dm": "Agile",
+                "avail": "Free"
+            },
+            {
+                "id": "dm3",
+                "dm": "Scrum",
+                "avail": "Mostly Free (Costs may apply for training, certifications, and tools)"
+            },
+            {
+                "id": "dm4",
+                "dm": "Kanban",
+                "avail": "Free"
+            },
+            {
+                "id": "dm5",
+                "dm": "Extreme Programming (XP)",
+                "avail": "Free"
+            },
+            {
+                "id": "dm6",
+                "dm": "Lean Development",
+                "avail": "Free"
+            },
+            {
+                "id": "dm7",
+                "dm": "Feature-Driven Development (FDD)",
+                "avail": "Free"
+            },
+            {
+                "id": "dm8",
+                "dm": "Rapid Application Development (RAD)",
+                "avail": "Mostly Free (Costs may apply for RAD tools)"
+            },
+            {
+                "id": "dm9",
+                "dm": "DevOps",
+                "avail": "Free (Costs may apply for DevOps tools and platforms)"
+            },
+            {
+                "id": "dm10",
+                "dm": "Spiral Model",
+                "avail": "Free (Conceptual framework)"
+            }
+        ]
+        
+    }
+]

@@ -1,0 +1,122 @@
+
+:root{	
+  --fabric-theme-light: #1c877e;
+	--fabric-theme-lighter: #389e95;
+	--fabric-theme-lightest: #6ecfc5;
+	--fabric-theme-lightest10: #6ecfc51a;
+	--fabric-theme-lightest35: #6ecfc559;
+	--fabric-theme-lightest50: #6ecfc580;
+  --fabric-theme-base: #006f67;
+  --fabric-theme-base: #033d39;
+  --whole-page-base:#f4f4f4;
+  --fabric-theme: #aaa3a36c;
+}
+
+._wd{
+  /* min-width:calc( 100% - 45px); */
+  width: calc( 100% - 45px);
+  }
+/*  */
+  header{
+    /* background-color: #212529; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 88px;
+    width: calc( 100% - 45px);
+    /* border-bottom:1px solid #cccccc33; */
+    width: 100%;
+    position: sticky;
+    z-index: 1 !important;
+    top: 0;
+   }
+   
+aside {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 45px;
+  z-index: 1;
+  /* background-color:  #181b1e; */
+}
+aside > div:first-child{
+  height: 100%  !important;
+}
+aside > div:last-child{
+  display: flex;
+  /* align-items: flex-end !important; */
+  height:130px !important;
+}
+/*  #00000044; */
+._borderBottom {
+  border-bottom: 0.666px solid #cccccc33;
+  padding-bottom: 5px;
+}
+._borderTop {
+  border-top: 0.666px solid #cccccc33;
+  /* padding: 5px; */
+  margin-top: 5px !important;
+}
+
+._borderTop:hover{
+    border-top: unset;
+    background-color:#1C00ff00;
+}
+._borderBottom:hover> img,
+._borderTop:hover > img{
+    transform: scale(1.1229);
+} 
+._hoverdLogout:hover{
+    filter: invert(23%) sepia(89%) saturate(5066%) hue-rotate(358deg) brightness(94%) contrast(137%);
+} 
+
+@media only screen and (max-width:775px) {
+  ._wd{
+    width: 100% !important;
+  }
+  aside {
+    position: fixed;
+    top: unset !important;
+    bottom: 0 !important;
+    height: 45px !important;
+    width: 100% !important;
+  }
+  ._borderTop{
+    border-top: unset !important;
+    padding: unset !important;
+    margin-top: unset !important;
+  }
+
+  ._borderBottom {
+    border-bottom: unset !important;
+    padding-bottom:unset !important;
+  }
+
+  aside > div:first-child{
+    height:45px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  aside > div:last-child{
+    height:45px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+._btn_language{
+background-color: transparent;
+border:thin solid #cccccc33;
+height: 25px;
+width: 27.5px;
+border-radius: 5px;
+font-size: 13.5px;
+font-weight: 700;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 2.75px;
+color: #69656571;
+}
