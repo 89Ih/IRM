@@ -101,6 +101,10 @@
   width: 100%;
 
 }
+._row > summary::before{
+  list-style: none !important;
+  content: unset !important;
+}
 ._row[open]> summary {
   box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 5px;
 }

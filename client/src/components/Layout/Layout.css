@@ -1,4 +1,4 @@
-
+/* 
 :root{	
   --fabric-theme-light: #1c877e;
 	--fabric-theme-lighter: #389e95;
@@ -10,11 +10,12 @@
   --fabric-theme-base: #033d39;
   --whole-page-base:#f4f4f4;
   --fabric-theme: #aaa3a36c;
-}
+} */
 
 ._wd{
   /* min-width:calc( 100% - 45px); */
   width: calc( 100% - 45px);
+
   }
 /*  */
   header{
