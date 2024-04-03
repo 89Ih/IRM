@@ -4,23 +4,29 @@
 }
 ._ipt{
     padding: 0 10px 0 10px;
-    border:1px solid #cccccc33;
-    outline: unset;
+    /* border:1px solid #cccccc33; */
+   
     width: 90%;
     height: 38px;
     border-radius: 8px;
     background-color: unset;
     
 }
+._ipt:focus{
+   outline: thin dashed transparent;
+}
 ._btn{
-    border:1px solid #cccccc33;
+    /* border:1px solid #cccccc33; */
     width: 90%;
     height: 38px;
     border-radius: 8px;
     background-color: unset;
     text-align: center;
 }
-._btn:hover{
+._btn_light:hover{
+    background-color: #6ecfc580;
+}
+._btn_dark:hover{
     background-color: #474545a4 ;
 }
 @media only screen and (max-width: 600px) {
