@@ -46,6 +46,7 @@ const LoginPage = () => {
           className="_ipt"
           style={{border}}
           value={password}
+          autocomplete="current-password"
           onChange={(event) => setPassword(event.target.value)}
         />
         <button type="submit" className={`_btn ${mode === 'light' ? '_btn_light' :'_btn_dark'}`}  style={{border}}>
