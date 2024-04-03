@@ -25,8 +25,8 @@ module.exports = (app) => {
   // controls a very specific header to pass headers from the frontend
   app.use(
     cors({
-      origin: [REACT_FRONTEND,ANGUALR_FRONTEND],
-
+      origin: [Production,REACT_FRONTEND,ANGUALR_FRONTEND],
+      methods:["POST","GET","DELETE","PUT"]
     })
   );
 
