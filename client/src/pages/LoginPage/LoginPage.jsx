@@ -19,7 +19,6 @@ const LoginPage = () => {
     authService
       .login(data)
       .then((res) => {
-        console.log(res);
         storeToken(res.data.authToken);
         authenticateUser();
       })
@@ -38,6 +37,7 @@ const LoginPage = () => {
           className="_ipt"
           style={{border}}
           value={email}
+          autocomplete="username"
           onChange={(event) => seEmail(event.target.value)}
         />
         <input
