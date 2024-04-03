@@ -26,6 +26,7 @@ module.exports = (app) => {
   app.use(
     cors({
       origin: [REACT_FRONTEND,ANGUALR_FRONTEND],
+      methods:["POST","GET"]
     })
   );
 
