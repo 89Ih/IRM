@@ -15,7 +15,7 @@ const cors = require("cors");
 
 const REACT_FRONTEND = process.env.ORIGIN;
 const ANGUALR_FRONTEND= process.env.ANGUALR_URL;
-
+const Production =process.env.PRODUCTION_URL
 // Middleware configuration
 module.exports = (app) => {
   // Because this will be hosted on a server that will accept requests from outside and it will be hosted ona server with a `proxy`, express needs to know that it should trust that setting.
@@ -25,8 +25,8 @@ module.exports = (app) => {
   // controls a very specific header to pass headers from the frontend
   app.use(
     cors({
-      origin: [REACT_FRONTEND,ANGUALR_FRONTEND],
-      methods:["POST","GET"]
+      origin: [Production,REACT_FRONTEND,ANGUALR_FRONTEND],
+      methods:["POST","GET","DELETE","PUT"]
     })
   );
 
