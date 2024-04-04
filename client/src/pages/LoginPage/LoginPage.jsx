@@ -36,21 +36,23 @@ const LoginPage = () => {
   }
   return (
     <div className="_ff w-100 p-5">
+      
       <form className="_ff _form_login" onSubmit={handleSubmit}>
+
         <h1>{content.login}</h1>
         <input
           type="text"
           placeholder={`${content.email} :`}
-          className="_ipt"
           style={{ border }}
           value={email}
           autoComplete="username"
           onChange={(event) => seEmail(event.target.value)}
+          className={`${mode === "light" ? "_ipt_light" : "_ipt_dark"}`}
         />
         <input
           type="password"
           placeholder={`${content.password} :`}
-          className="_ipt"
+          className={`${mode === "light" ? "_ipt_light" : "_ipt_dark"}`}
           style={{ border }}
           value={password}
           autoComplete="current-password"
@@ -58,8 +60,8 @@ const LoginPage = () => {
         />
         <button
           type="submit"
-          className={`_btn  ${mode === "light" ? "_btn_light" : "_btn_dark"}`}
-          style={{ border }}
+          className={`${mode === "light" ? "_btn_light" : "_btn_dark"}`}
+
         >
           {content.signin}
         </button>

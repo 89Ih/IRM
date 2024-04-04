@@ -1,42 +1,46 @@
-._form_login{
-    width: 600px;
-    gap: 15px;
+._form_login {
+  width: 600px;
+  gap: 15px;
 }
-._ipt{
-    padding: 0 10px 0 10px;
-    /* border:1px solid #cccccc33; */
-   
-    width: 90%;
-    height: 38px;
-    border-radius: 8px;
-    background-color: unset;
-    
+._form_login > input,
+._form_login > button {
+  padding: 0 10px 0 10px;
+  width: 90%;
+  height: 38px;
+  border-radius: 8px;
+  background-color: unset;
 }
-._ipt:focus{
-   outline: thin dashed transparent;
+._ipt_light:focus {
+  border: thin solid transparent !important;
+  outline: thin solid #389e95 !important;
+  /*  */
 }
-._btn{
-    /* border:1px solid #cccccc33; */
-    width: 90%;
-    height: 38px;
-    border-radius: 8px;
-    background-color: unset;
-    text-align: center;
+._ipt_dark:focus {
+  border: thin solid transparent !important;
+  outline: thin solid #cccccc33 !important;
 }
-._btn_light:hover{
-    background-color: #6ecfc580;
+._btn_light {
+  border: thin solid #389e95;
+  color: black;
+  text-align: center;
 }
-._btn_dark:hover{
-    background-color: #474545a4 ;
+._btn_dark {
+  border: thin solid #cccccc33;
+  color: #dee2e6;
+  text-align: center;
+}
+._btn_light:hover {
+  background-color: #6ecfc580;
+}
+._btn_dark:hover {
+  background-color: #474545a4;
 }
 @media only screen and (max-width: 600px) {
-    ._form_login {
+  ._form_login {
     width: 100%;
-    }
-    ._ipt,
-    ._btn{
-        width: 95%;
-    }
   }
-
- 
+  ._ipt,
+  ._btn {
+    width: 95%;
+  }
+}
