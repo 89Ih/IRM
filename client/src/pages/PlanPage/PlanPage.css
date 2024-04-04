@@ -106,6 +106,12 @@
 }
 ._row > summary::marker {
   display: none !important;
+  content: "";
+}
+details summary::-webkit-details-marker,
+details summary::marker {
+ display: none; 
+ content: "";
 }
 ._row[open]> summary {
   box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 5px;
