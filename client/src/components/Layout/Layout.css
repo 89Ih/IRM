@@ -72,6 +72,7 @@ aside > div:last-child{
 } 
 
 @media only screen and (max-width:775px) {
+
   ._wd{
     width: 100% !important;
   }
@@ -87,12 +88,10 @@ aside > div:last-child{
     padding: unset !important;
     margin-top: unset !important;
   }
-
   ._borderBottom {
     border-bottom: unset !important;
     padding-bottom:unset !important;
   }
-
   aside > div:first-child{
     height:45px !important;
     display: flex;

@@ -11,7 +11,7 @@ function Layout({ children }) {
   return (
     <>
       {language === "en" ? <English /> : <Arabic />}
-      <div className={mq600 ? "_ff" : "_frb"}>
+      <div  className={mq600 ? "_ff" : "_frb"}>
         <div className="_wd">
           <Header />
           <main>{children}</main>

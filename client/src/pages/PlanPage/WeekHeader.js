@@ -4,7 +4,7 @@ import "./PlanPage.css";
 const WeekHeader = () => {
   const { currentDate, content, mode, styles } = useContext(AuthContext);
   const {currentWeek} = content
-  const { borderBottom, borderTop } = styles;
+  const { borderBottom, borderTop,backgroundColor } = styles;
   const { woy, week } = currentDate;
   const [weeks, setWeeks] = useState([]);
   let cw = week === "05" ? "01" : week;
@@ -60,7 +60,7 @@ const WeekHeader = () => {
   }, [woy, week,content.currentWeek]);
 
   return (
-    <ul style={{ borderBottom, borderTop }}>
+    <ul style={{ borderBottom, borderTop,backgroundColor }}>
       <li className="fz18 user-item">{content.user}</li>
       {weeks.map(({ weekNum, weekLabel }, index) => (
         <li key={`week-${index}`} className={`w${cw}i0${index + 1}`}>

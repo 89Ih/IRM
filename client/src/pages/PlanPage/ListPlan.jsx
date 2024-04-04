@@ -3,11 +3,10 @@ import { AuthContext } from "../../context/auth.context";
 import WeekHeader from "./WeekHeader";
 
 const List = ({ children }) => {
-  const { mode } = useContext(AuthContext);
 
   return (
     <section
-      className={`_ls-plan `}>
+      className="_ls-plan mb-5">
       <WeekHeader />
       {children}
     </section>
