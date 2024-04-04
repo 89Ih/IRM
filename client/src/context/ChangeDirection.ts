@@ -1,4 +1,5 @@
 export function changeDirection(
+  mode:string,
   language: string,
   arCss: string,
   rtlHREF: string,
@@ -7,7 +8,8 @@ export function changeDirection(
   ltrHREF: string,
   ltrIGT: string,
   dispatch: (action: any) => void, // Update the type of dispatch if possible
-  changeLanguage: (lang: string) => void // Update the type of changeLanguage if possible
+  changeLanguage: (lang: string) => void, // Update the type of changeLanguage if possible
+  changeMode: (mode: string) => void
 ) {
   // Find HTML element
   const HTML = document.querySelector("html");
@@ -23,13 +25,14 @@ export function changeDirection(
     console.error("CSS link or Bootstrap link element not found.");
     return;
   }
-
+   HTML.style.backgroundColor=`${mode === 'dark' ? '#212529':'white'}` 
   // Remove href and integrity attributes from Bootstrap link
   Bootstrap.removeAttribute("href");
   Bootstrap.removeAttribute("integrity");
 
   // Set direction and language attributes based on the selected language
   if (language === "en") {
+
     HTML.setAttribute("dir", "rtl");
     HTML.setAttribute("lang", "ar");
     CSSLink.setAttribute("href", arCss);
@@ -37,6 +40,7 @@ export function changeDirection(
     Bootstrap.setAttribute("integrity", rtlIGT);
     dispatch(changeLanguage("ar"));
   } else {
+    
     HTML.setAttribute("dir", "ltr");
     HTML.setAttribute("lang", "en");
     CSSLink.setAttribute("href", enCss);
@@ -48,6 +52,7 @@ export function changeDirection(
 
 
 export function festDirection(
+  mode:string,
   language: string,
   arCss: string,
   rtlHREF: string,
@@ -65,7 +70,7 @@ export function festDirection(
     console.error("HTML element not found.");
     return;
   }
-
+  HTML.style.backgroundColor=`${mode === 'dark' ? '#212529':'white'}` 
   // Find CSS link and Bootstrap link elements
   const CSSLink = document.querySelector("#dir_css");
   const Bootstrap = document.querySelector("#lk_dir");

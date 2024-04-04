@@ -10,10 +10,12 @@ export function switchTheme(
   }
   theme.removeAttribute("data-bs-theme");
   if (mode === "dark") {
+    theme.style.backgroundColor='white'
     dispatch(changeMode("light"));
     return theme.setAttribute("data-bs-theme", "light");
   }
   if (mode === "light") {
+    theme.style.backgroundColor='#212529'
     dispatch(changeMode("dark"));
     return theme.setAttribute("data-bs-theme", "dark");
   }
@@ -28,10 +30,10 @@ export function festTheme(
     return;
   }
   if (mode === "dark") {
-
+    theme.style.backgroundColor='#212529'
     return theme.setAttribute("data-bs-theme", "dark");
   } else {
-
+    theme.style.backgroundColor='white'
     return theme.setAttribute("data-bs-theme", "light");
   }
 }

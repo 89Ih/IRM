@@ -21,7 +21,7 @@
 }
 ._btn_light {
   border: thin solid #389e95;
-  color: black;
+  color: inherit;
   text-align: center;
 }
 ._btn_dark {

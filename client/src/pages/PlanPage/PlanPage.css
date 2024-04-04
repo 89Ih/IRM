@@ -101,13 +101,13 @@
   width: 100%;
 
 }
-._row > summary::before{
+/* ._row > summary::before{
   list-style: none !important;
 }
 ._row > summary::marker {
   display: none !important;
   content: "";
-}
+} */
 details summary::-webkit-details-marker,
 details summary::marker {
  display: none; 

@@ -76,7 +76,9 @@ function AuthProviderWrapper(props) {
   };
   // important -- * * --
   const callChangeDirection = () => {
+
     changeDirection(
+      mode,
       language,
       arCss,
       rtlHREF,
@@ -85,12 +87,13 @@ function AuthProviderWrapper(props) {
       ltrHREF,
       ltrIGT,
       dispatch,
-      changeLanguage
+      changeLanguage,
     );
   }
 
   const callFestDirection = () => {
     festDirection(
+      mode,
       language,
       arCss,
       rtlHREF,
