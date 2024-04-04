@@ -36,7 +36,7 @@ const LoginPage = () => {
   }
   return (
     <div className="_ff w-100 p-5">
-      
+
       <form className="_ff _form_login" onSubmit={handleSubmit}>
 
         <h1>{content.login}</h1>
@@ -61,7 +61,6 @@ const LoginPage = () => {
         <button
           type="submit"
           className={`${mode === "light" ? "_btn_light" : "_btn_dark"}`}
-
         >
           {content.signin}
         </button>
