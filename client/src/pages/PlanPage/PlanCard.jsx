@@ -12,7 +12,7 @@ const PlanCard = ({ plan, description, _id, remove, dynamics, onRefresh }) => {
     retrievePlan();
     setShow(true);
   };
-  const [workloadOptions, setWorkloadOptions] = useState();
+  const [workloadOptions, setWorkloadOptions] = useState([]);
   const [weekOptions] = useState(Array.from({ length: 52 }, (_, i) => i + 1));
   const { user, currentDate, mode, styles } = useContext(AuthContext);
 
@@ -44,6 +44,7 @@ const PlanCard = ({ plan, description, _id, remove, dynamics, onRefresh }) => {
           priority,
           weekOfYear,
         });
+        getOpt(weekOfYear)
       })
       .catch((err) => {
         console.error(err);
@@ -59,7 +60,7 @@ const PlanCard = ({ plan, description, _id, remove, dynamics, onRefresh }) => {
     setPlanData({ ...planData, [field]: event.target.value });
   };
   /////(*_*)\\\\\
-  async function getOpt() {
+  async function getOpt(weekParam) {
     let opts = [];
     let arr = Array.from({ length: 10 }, (_, i) => ({ opt: (i + 1) * 10 }));
     setWorkloadOptions(arr);
@@ -68,7 +69,7 @@ const PlanCard = ({ plan, description, _id, remove, dynamics, onRefresh }) => {
     }
     const obj = {
       user: dynamics,
-      weekOfYear: planData.weekOfYear,
+      weekOfYear:weekParam,
     };
     const encodedObj = encodeURIComponent(JSON.stringify(obj));
     const res = await restService.getTotalAmountWorkload(encodedObj);
@@ -87,13 +88,16 @@ const PlanCard = ({ plan, description, _id, remove, dynamics, onRefresh }) => {
     }
   }
   const handleWOY = (event) => {
+    // console.log(event.target.value);
     handleChange(event, "weekOfYear");
-    getOpt();
+    getOpt(event.target.value);
   };
   useEffect(() => {
     retrievePlan();
-    getOpt();
+
+     // eslint-disable-next-line
   }, []);
+
   ////
   return (
     <details className={`_p_card mb-2 ${mode === "light" && "_body_light"}`}>

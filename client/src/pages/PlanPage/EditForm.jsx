@@ -120,7 +120,7 @@ const EditForm = (props) => {
                   onChange={onChangeWorkload}
                 >
                   <option defaultValue="selected">...</option>
-                  {workloadOptions?.map(({ opt }) => (
+                  {workloadOptions?.map(({opt }) => (
                     <option key={`opt${opt}`} value={opt}>
                       {opt}%
                     </option>

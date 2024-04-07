@@ -9,7 +9,6 @@ export function changeDirection(
   ltrIGT: string,
   dispatch: (action: any) => void, // Update the type of dispatch if possible
   changeLanguage: (lang: string) => void, // Update the type of changeLanguage if possible
-  changeMode: (mode: string) => void
 ) {
   // Find HTML element
   const HTML = document.querySelector("html");
@@ -78,12 +77,9 @@ export function festDirection(
     console.error("CSS link or Bootstrap link element not found.");
     return;
   }
-
   Bootstrap.removeAttribute("href");
   Bootstrap.removeAttribute("integrity");
-
   if (language === "en") {
-
     HTML.setAttribute("dir", "ltr");
     HTML.setAttribute("lang", "en");
     CSSLink.setAttribute("href", enCss);
