@@ -80,9 +80,9 @@ const EditForm = (props) => {
                   value={priority}
                   onChange={onChangePriority}
                 >
-                  <option defaultValue="selected">...</option>
+                 
                   <option value="Low">{content.low}</option>
-                  <option value="Normal">{content.normal}</option>
+                  <option defaultValue="Normal">{content.normal}</option>
                   <option value="High">{content.high}</option>
                 </select>
               </div>
@@ -96,7 +96,7 @@ const EditForm = (props) => {
                   value={weekOfYear}
                   onChange={onChangeWeekOfYear}
                 >
-                  <option defaultValue="selected">...</option>
+                  <option  defaultValue="selected">...</option>
                   {weekOptions
                     .filter(
                       (f) => f <= currentDate.woy + 3 && f >= currentDate.woy
@@ -119,7 +119,7 @@ const EditForm = (props) => {
                   value={workload}
                   onChange={onChangeWorkload}
                 >
-                  <option defaultValue="selected">...</option>
+                  <option key={0} defaultValue="selected" >...</option>
                   {workloadOptions?.map(({opt }) => (
                     <option key={`opt${opt}`} value={opt}>
                       {opt}%
@@ -185,9 +185,9 @@ const EditForm = (props) => {
               className="btn border mb-1 HG"
               onClick={onRefresh}
             >
-              <button type="button" className="_button" onClick={onRefresh}>
+              <span  onClick={onRefresh}>
                 {content.saveChanges}
-              </button>
+              </span>
             </button>
           </div>
         </form>

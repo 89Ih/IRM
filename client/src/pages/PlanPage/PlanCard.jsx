@@ -6,17 +6,18 @@ import EditForm from "./EditForm";
 
 const PlanCard = ({ plan, description, _id, remove, dynamics, onRefresh }) => {
   const { content } = useContext(AuthContext);
+  const [workloadOptions, setWorkloadOptions] = useState([]);
+  const [weekOptions] = useState(Array.from({ length: 52 }, (_, i) => i + 1));
   const [show, setShow] = useState(false);
+  const { user, currentDate, mode, styles } = useContext(AuthContext);
+  const { toolbar , logo3} = styles
+ 
   const handleClose = () => setShow(false);
   const handleShow = () => {
     retrievePlan();
     setShow(true);
   };
-  const [workloadOptions, setWorkloadOptions] = useState([]);
-  const [weekOptions] = useState(Array.from({ length: 52 }, (_, i) => i + 1));
-  const { user, currentDate, mode, styles } = useContext(AuthContext);
 
-  const { toolbar , logo3} = styles
 
   const [planData, setPlanData] = useState({
     plan: "",
@@ -88,17 +89,13 @@ const PlanCard = ({ plan, description, _id, remove, dynamics, onRefresh }) => {
     }
   }
   const handleWOY = (event) => {
-    // console.log(event.target.value);
     handleChange(event, "weekOfYear");
     getOpt(event.target.value);
   };
   useEffect(() => {
     retrievePlan();
-
      // eslint-disable-next-line
   }, []);
-
-  ////
   return (
     <details className={`_p_card mb-2 ${mode === "light" && "_body_light"}`}>
       <summary>{plan}</summary>
