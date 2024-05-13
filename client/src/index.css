@@ -1,3 +1,9 @@
+/* body::-webkit-scrollbar{
+width: 0;
+} */
+body{
+  overflow-x: hidden;
+}
 ._button{
   border: 1px solid transparent !important;
   background-color: unset;
@@ -9,10 +15,7 @@
   padding: unset !important;
   margin: unset !important;
   border: unset;
-
-
 }
-
 ._ip{
   padding: 0 10px 0 10px;
   border:1px solid #cccccc33;
